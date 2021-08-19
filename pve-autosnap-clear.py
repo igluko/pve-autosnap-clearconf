@@ -6,12 +6,6 @@ import datetime
 import os
 import subprocess
 
-def print_separetor():
-    input("(Press any key for continue...)")
-    print
-    print("---")
-    print
-
 def clean_cron():
     print("---")
     print("Current crontab is:")
