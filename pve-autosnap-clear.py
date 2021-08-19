@@ -93,10 +93,12 @@ if __name__ == '__main__':
     clean_cron()
     backup_qemu()
     print("---")
+    # clear config
     config_list = get_configs('/etc/pve/local/qemu-server/')
     for config in config_list:
         clear_conf(config)
     print("---")
+    # clear ZFS
     cmd = 'zfs list -H -o name -t snapshot -r rpool/data'
     output = subprocess.run(cmd.split(), stdout=subprocess.PIPE, text=True)
     #print(output.stdout)
