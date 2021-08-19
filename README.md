@@ -1,2 +1,5 @@
 # pve-autosnap-clearconf
-pve-autosnap-clearconf.py
+This is cleaning tool, for unuinstall https://bitbucket.org/ponceto/pve-autosnap
+
+This tool remove autosnap blocks from qemu .conf, files
+then remove and from zfs
