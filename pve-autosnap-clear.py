@@ -101,7 +101,6 @@ if __name__ == '__main__':
     # clear ZFS
     cmd = 'zfs list -H -o name -t snapshot -r rpool/data'
     output = subprocess.run(cmd.split(), stdout=subprocess.PIPE, text=True)
-    #print(output.stdout)
     zfs_list = output.stdout.splitlines()
     zfs_destroy_list = filter_zfs_snapshots(zfs_list)
     print("ZFS will destroy", len(zfs_destroy_list), "of", len(zfs_list), "snapshots")
